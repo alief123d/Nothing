@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bio.css" />
+    <title>BIO</title>
+</head>
+
+<body>
+    <div class="dropdown">
+
+        <button class="mainmenubtn">Main Menu</button>
+
+        <div class="dropdown-child">
+            <a href="index.html">HOME</a>
+            <a href="jadwal.html">JADWAL</a>
+            <a href="#">BIO</a>
+            <a onclick="darkMode()">MODE</a>
+        </div>
+    </div>
+
+    <h1>WELCOME to my bio</h1>
+    <br>
+    <h3>My name is alief wafiq ramadhan i live in Indonesia at Pekanbaru city.</h3>
+    <h3>My hobby is playing games, drawing anime, coding, watching anime and reading manga.</h3>
+    <h3>Im 13yo my birthday is on 4 september. I only can make simple website bc im still a beginner.</h3>
+    <h3>I want to be a programmer </h3>
+    <a href="https://www.instagram.com/aliefwafiq/?hl=id" target="_blank">follow my ig</a>
+    <br>
+    <br>
+    <br>
+    <h4>tolong ajarkan cara bikin responsive web page :3</h4>
+    <img src="81c2d8d25ca786cfbd925c686c983695.png" />
+
+    <script>
+        let body = document.body;
+
+        const darkLimit = 0;
+        let darkCounter = 0;
+
+
+        function darkMode() {
+            darkCounter += 1;
+            if (darkCounter == darkLimit) {
+
+                return;
+            }
+            let darkRemainingLeft = darkLimit - darkCounter;
+            body.classList.toggle("dark")
+        }
+    </script>
+
+
+
+</body>
+
+</html>

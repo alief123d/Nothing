@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="jadwal.css" />
+
+    <title>Jadwal</title>
+
+    <script type="text/javascript">
+
+        function displayTime() {
+            var clientTime = new Date();
+            var time = new Date(clientTime.getTime());
+            var sh = time.getHours().toString();
+            var sm = time.getMinutes().toString();
+            var ss = time.getSeconds().toString();
+            document.getElementById("jam").innerHTML = (sh.length == 1 ? "0" + sh : sh) + ":" + (sm.length == 1 ? "0" + sm : sm) + ":" + (ss.length == 1 ? "0" + ss : ss);
+            document.getElementById("jaminput").value = (sh.length == 1 ? "0" + sh : sh) + ":" + (sm.length == 1 ? "0" + sm : sm) + ":" + (ss.length == 1 ? "0" + ss : ss);
+        }
+    </script>
+
+</head>
+
+<body onload="setInterval('displayTime()', 1000);">
+
+    <div class="dropdown">
+
+        <button class="mainmenubtn">Main Menu</button>
+
+        <div class="dropdown-child">
+            <a href="index.html">HOME</a>
+            <a href="#">JADWAL</a>
+            <a href="bio.html">BIO</a>
+            <a onclick="darkMode()">MODE</a>
+        </div>
+    </div>
+
+    <h1 id="jam"></h1>
+
+    <input type="text" id="jaminput" name="">
+    <br>
+    <br>
+    <h3 class="h3Jad">Jadwal mapel</h3>
+    <br>
+    <br>
+
+    <h3 class="h3Jad">senin : prakarya, b.indo, ips, pkn </h3>
+
+    <h3 class="h3Jad">selasa : inf, ski, fiqih, mtk, ipa</h3>
+
+    <h3 class="h3Jad">rabu : b.ing, b.indo, ips, b.arab</h3>
+
+    <h3 class="h3Jad">kamis : mtk, sby, akidah, qh</h3>
+
+    <h3 class="h3Jad">jumat : ipa, b.ing, penjas</h3>
+
+    <img src="Yanfei icon soft ♡ ༶.png" />
+
+    <br>
+    <br>
+    Note :
+    <br>
+    <br>
+    <h3 class="h3Jad">senin : baju putih</h3>
+    <h3 class="h3Jad">selasa : baju pramuka</h3>
+    <h3 class="h3Jad">rabu : baju biru</h3>
+    <h3 class="h3Jad">kamis: baju olahraga</h3>
+    <h3 class="h3Jad">jumat : baju muslim</h3>
+
+
+
+
+
+
+
+
+    <script>
+        let body = document.body;
+
+        const darkLimit = 0;
+        let darkCounter = 0;
+
+
+        function darkMode() {
+            darkCounter += 1;
+            if (darkCounter == darkLimit) {
+
+                return;
+            }
+            let darkRemainingLeft = darkLimit - darkCounter;
+            body.classList.toggle("dark")
+        }
+    </script>
+
+</body>
+
+</html>
